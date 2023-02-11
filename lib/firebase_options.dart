@@ -44,39 +44,39 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyC17d4c3rc7sK-NdLlxDF9OG9YcSGnwO7k',
-    appId: '1:873192726683:web:13c0f43d932d8f225a663e',
-    messagingSenderId: '873192726683',
-    projectId: 'semester-project-f7216',
-    authDomain: 'semester-project-f7216.firebaseapp.com',
-    storageBucket: 'semester-project-f7216.appspot.com',
+    apiKey: 'AIzaSyCfLJE2IdxzA8fant2vd56-vZJtgJ8QLUQ',
+    appId: '1:698538807790:web:3a222c89029497edde3eff',
+    messagingSenderId: '698538807790',
+    projectId: 'semesterproject-11249',
+    authDomain: 'semesterproject-11249.firebaseapp.com',
+    storageBucket: 'semesterproject-11249.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDd84rhAGQxSXskJM_njzzJL_0yvvlfCXM',
-    appId: '1:873192726683:android:b41b15f244bcf6765a663e',
-    messagingSenderId: '873192726683',
-    projectId: 'semester-project-f7216',
-    storageBucket: 'semester-project-f7216.appspot.com',
+    apiKey: 'AIzaSyButoC7-i1z59xDGIisyCbL_IkHjsNJG98',
+    appId: '1:698538807790:android:fd72aba827470126de3eff',
+    messagingSenderId: '698538807790',
+    projectId: 'semesterproject-11249',
+    storageBucket: 'semesterproject-11249.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAuvNIMK7UUYYe9loJ4XW3HKqS6w__no5Y',
-    appId: '1:873192726683:ios:91648690ea82b22e5a663e',
-    messagingSenderId: '873192726683',
-    projectId: 'semester-project-f7216',
-    storageBucket: 'semester-project-f7216.appspot.com',
-    iosClientId: '873192726683-p14ve13r0f0uuooqjq2aki94ntm71ab4.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBXFUf5RmWD_rZs0s_7_ucFm-BzWT6T1pA',
+    appId: '1:698538807790:ios:a9a6669e8c88fbf1de3eff',
+    messagingSenderId: '698538807790',
+    projectId: 'semesterproject-11249',
+    storageBucket: 'semesterproject-11249.appspot.com',
+    iosClientId: '698538807790-qmet6hrjkjq2o6gug9f9u0f8bjcehtgv.apps.googleusercontent.com',
     iosBundleId: 'com.example.semesterproject',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAuvNIMK7UUYYe9loJ4XW3HKqS6w__no5Y',
-    appId: '1:873192726683:ios:91648690ea82b22e5a663e',
-    messagingSenderId: '873192726683',
-    projectId: 'semester-project-f7216',
-    storageBucket: 'semester-project-f7216.appspot.com',
-    iosClientId: '873192726683-p14ve13r0f0uuooqjq2aki94ntm71ab4.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBXFUf5RmWD_rZs0s_7_ucFm-BzWT6T1pA',
+    appId: '1:698538807790:ios:a9a6669e8c88fbf1de3eff',
+    messagingSenderId: '698538807790',
+    projectId: 'semesterproject-11249',
+    storageBucket: 'semesterproject-11249.appspot.com',
+    iosClientId: '698538807790-qmet6hrjkjq2o6gug9f9u0f8bjcehtgv.apps.googleusercontent.com',
     iosBundleId: 'com.example.semesterproject',
   );
 }
