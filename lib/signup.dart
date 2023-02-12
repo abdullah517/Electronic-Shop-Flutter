@@ -150,30 +150,36 @@ class _SignUpFormState extends State<SignUpForm> {
                     color: Colors.black,
                   )),
               validator: (value) {
+                if (value!.isEmpty) return "this field is required";
+
                 String pattern =
                     r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$';
                 RegExp regExp = new RegExp(pattern);
-                return regExp.hasMatch(value!) ? null : "Weak Password";
+                return regExp.hasMatch(value) ? null : "Weak Password";
               },
             ),
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width,
             child: TextFormField(
-              controller: confirmcontroller,
-              style: TextStyle(fontSize: 22),
-              decoration: InputDecoration(
-                focusedBorder: getfocusedborder(),
-                enabledBorder: getenabledborder(),
-                errorBorder: geterrorborder(),
-                focusedErrorBorder: geterrorfocusedborder(),
-                hintText: "Confirm Password",
-                hintStyle: TextStyle(fontSize: 22),
-                errorStyle: TextStyle(fontSize: 18),
-              ),
-              validator: (value) =>
-                  value == passcontroller.text ? null : "Password do not match",
-            ),
+                controller: confirmcontroller,
+                style: TextStyle(fontSize: 22),
+                decoration: InputDecoration(
+                  focusedBorder: getfocusedborder(),
+                  enabledBorder: getenabledborder(),
+                  errorBorder: geterrorborder(),
+                  focusedErrorBorder: geterrorfocusedborder(),
+                  hintText: "Confirm Password",
+                  hintStyle: TextStyle(fontSize: 22),
+                  errorStyle: TextStyle(fontSize: 18),
+                ),
+                validator: (value) {
+                  if (value!.isEmpty) return "this field is required";
+
+                  return value == passcontroller.text
+                      ? null
+                      : "Password do not match";
+                }),
           ),
           SizedBox(
             width: 280,
@@ -192,11 +198,11 @@ class _SignUpFormState extends State<SignUpForm> {
             children: [
               Text(
                 "Already have an account?",
-                style: TextStyle(fontSize: 22, color: Colors.amberAccent),
+                style: TextStyle(fontSize: 20, color: Colors.amberAccent),
               ),
               InkWell(
                 child: Text("Login",
-                    style: TextStyle(color: Colors.yellow, fontSize: 20)),
+                    style: TextStyle(color: Colors.yellow, fontSize: 18)),
                 onTap: () => Navigator.pop(context),
               )
             ],
