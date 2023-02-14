@@ -22,7 +22,7 @@ class Productsscreen extends StatelessWidget {
                 crossAxisSpacing: 5,
                 mainAxisSpacing: 5,
                 crossAxisCount: 2,
-                childAspectRatio: (0.3 / .4),
+                childAspectRatio: (0.27 / .4),
                 children: snapshot.data!.docs.map((doc) {
                   return ProductContainer(
                       imagepath: doc['Image'],

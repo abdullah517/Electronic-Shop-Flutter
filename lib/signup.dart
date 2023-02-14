@@ -40,7 +40,7 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
-  final formkey = GlobalKey<FormState>();
+  static final _formkey = GlobalKey<FormState>();
   final TextEditingController passcontroller = TextEditingController();
   final TextEditingController emailcontroller = TextEditingController();
 
@@ -75,7 +75,7 @@ class _SignUpFormState extends State<SignUpForm> {
   }
 
   void signup() {
-    if (formkey.currentState!.validate()) {
+    if (_formkey.currentState!.validate()) {
       _auth
           .createUserWithEmailAndPassword(
               email: emailcontroller.text.toString(),
@@ -91,7 +91,7 @@ class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formkey,
+      key: _formkey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

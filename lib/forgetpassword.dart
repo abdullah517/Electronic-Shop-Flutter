@@ -28,13 +28,13 @@ class Myform extends StatefulWidget {
 }
 
 class _MyformState extends State<Myform> {
-  final formkey = GlobalKey<FormState>();
+  static final _formkey = GlobalKey<FormState>();
   final TextEditingController emailcontroller = TextEditingController();
   FirebaseAuth _auth = FirebaseAuth.instance;
   var errormessage = null;
 
   void proceed() {
-    if (formkey.currentState!.validate()) {
+    if (_formkey.currentState!.validate()) {
       _auth.fetchSignInMethodsForEmail(emailcontroller.text).then((value) {
         if (value.isNotEmpty) {
           setState(() {
@@ -68,7 +68,7 @@ class _MyformState extends State<Myform> {
   @override
   Widget build(BuildContext context) {
     return Form(
-        key: formkey,
+        key: _formkey,
         child: Column(children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
@@ -121,7 +121,7 @@ class _MyformState extends State<Myform> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.04,
           ),
-          gradientbtn(btntext: "Send Code", func: proceed),
+          gradientbtn(btntext: "Send Link", func: proceed),
         ]));
   }
 }

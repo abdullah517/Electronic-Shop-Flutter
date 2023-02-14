@@ -40,7 +40,7 @@ class Infoform extends StatefulWidget {
 }
 
 class _InfoformState extends State<Infoform> {
-  final formkey = GlobalKey<FormState>();
+  static final _formkey = GlobalKey<FormState>();
   final namecontroller = TextEditingController();
   final addresscontroller = TextEditingController();
   final numbercontroller = TextEditingController();
@@ -49,7 +49,7 @@ class _InfoformState extends State<Infoform> {
       .collection(FirebaseAuth.instance.currentUser!.uid);
 
   void saveinfo() {
-    if (formkey.currentState!.validate()) {
+    if (_formkey.currentState!.validate()) {
       firestore.doc("user information").set({
         'Username': namecontroller.text,
         'Phone number': numbercontroller.text,
@@ -66,7 +66,7 @@ class _InfoformState extends State<Infoform> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formkey,
+      key: _formkey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

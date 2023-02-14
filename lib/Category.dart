@@ -80,9 +80,10 @@ class GetCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 610,
+      height: MediaQuery.of(context).size.height * 0.8,
       width: double.infinity,
       child: GridView.count(
+          childAspectRatio: (0.3 / .4),
           crossAxisCount: 2,
           children: List.generate(6, (index) {
             return GestureDetector(

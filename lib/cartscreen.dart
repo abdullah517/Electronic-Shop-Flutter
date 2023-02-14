@@ -33,7 +33,7 @@ class CartScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              width: 170,
+              width: 140,
               height: 200,
               child: Image.asset(
                 image,

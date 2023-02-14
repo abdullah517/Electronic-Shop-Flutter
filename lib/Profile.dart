@@ -59,69 +59,71 @@ class Userprofile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Center(
-        child: Column(
-          children: [
-            Text(
-              "Profile",
-              style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
-            ),
-            Getspace(context),
-            CircleAvatar(
-              radius: 90,
-              backgroundImage: AssetImage("assets/p.jpg"),
-            ),
-            Text(
-              FirebaseAuth.instance.currentUser!.email.toString(),
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-            ),
-            Getspace(context),
-            Getbutton(
-                context,
-                "My Account",
-                Icon(
-                  Icons.person,
-                  size: 25,
-                ),
-                logout),
-            Getspace(context),
-            Getbutton(
-                context,
-                "Notifications",
-                Icon(
-                  Icons.notifications,
-                  size: 25,
-                ),
-                logout),
-            Getspace(context),
-            Getbutton(
-                context,
-                "My Orders",
-                Icon(
-                  Icons.unsubscribe_rounded,
-                  size: 25,
-                ),
-                logout),
-            Getspace(context),
-            Getbutton(
-              context,
-              "Help Center",
-              Icon(
-                Icons.help_center,
-                size: 25,
+      child: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Text(
+                "Profile",
+                style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
               ),
-              logout,
-            ),
-            Getspace(context),
-            Getbutton(
+              Getspace(context),
+              CircleAvatar(
+                radius: 90,
+                backgroundImage: AssetImage("assets/p.jpg"),
+              ),
+              Text(
+                FirebaseAuth.instance.currentUser!.email.toString(),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              Getspace(context),
+              Getbutton(
+                  context,
+                  "My Account",
+                  Icon(
+                    Icons.person,
+                    size: 25,
+                  ),
+                  logout),
+              Getspace(context),
+              Getbutton(
+                  context,
+                  "Notifications",
+                  Icon(
+                    Icons.notifications,
+                    size: 25,
+                  ),
+                  logout),
+              Getspace(context),
+              Getbutton(
+                  context,
+                  "My Orders",
+                  Icon(
+                    Icons.unsubscribe_rounded,
+                    size: 25,
+                  ),
+                  logout),
+              Getspace(context),
+              Getbutton(
                 context,
-                "Log Out",
+                "Help Center",
                 Icon(
-                  Icons.logout,
+                  Icons.help_center,
                   size: 25,
                 ),
-                logout),
-          ],
+                logout,
+              ),
+              Getspace(context),
+              Getbutton(
+                  context,
+                  "Log Out",
+                  Icon(
+                    Icons.logout,
+                    size: 25,
+                  ),
+                  logout),
+            ],
+          ),
         ),
       ),
     );

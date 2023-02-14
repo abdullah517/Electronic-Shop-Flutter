@@ -42,7 +42,7 @@ class CustomForm extends StatefulWidget {
 }
 
 class _CustomFormState extends State<CustomForm> {
-  final formkey = GlobalKey<FormState>();
+  static final _formkey = GlobalKey<FormState>();
   final TextEditingController passcontroller = TextEditingController();
   final TextEditingController emailcontroller = TextEditingController();
   bool passvisibility = true;
@@ -56,8 +56,8 @@ class _CustomFormState extends State<CustomForm> {
   }
 
   Future<void> login() async {
-    if (formkey.currentState!.validate()) {
-      formkey.currentState!.save();
+    if (_formkey.currentState!.validate()) {
+      _formkey.currentState!.save();
       try {
         await _auth
             .signInWithEmailAndPassword(
@@ -93,7 +93,7 @@ class _CustomFormState extends State<CustomForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formkey,
+      key: _formkey,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [

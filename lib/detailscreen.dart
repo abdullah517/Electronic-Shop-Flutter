@@ -119,39 +119,41 @@ class _DetailscreenState extends State<Detailscreen> {
             ),
           ),
         ),
-        body: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  text,
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
-                ),
-                IconButton(
-                    onPressed: () => wishlist(),
-                    icon: Icon(
-                      isfav ? Icons.favorite : Icons.favorite_border,
-                      size: 30,
-                    )),
-              ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.1,
-            ),
-            Text(
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-              textAlign: TextAlign.justify,
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.2,
-            ),
-            gradientbtn(btntext: "Add to Cart", func: savecartitem)
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    text,
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w700),
+                  ),
+                  IconButton(
+                      onPressed: () => wishlist(),
+                      icon: Icon(
+                        isfav ? Icons.favorite : Icons.favorite_border,
+                        size: 30,
+                      )),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
+              ),
+              Text(
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!" +
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odio!",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                textAlign: TextAlign.justify,
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.2,
+              ),
+              gradientbtn(btntext: "Add to Cart", func: savecartitem)
+            ],
+          ),
         ),
       ),
     );
